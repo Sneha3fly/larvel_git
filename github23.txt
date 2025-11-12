@@ -1,0 +1,101 @@
+Here's how to stage and commit changes in Git:
+
+## Step 1: Stage Changes
+
+**Stage a specific file:**
+git add filename        or basically do git add . (this selects all)
+```
+**Stage all changes:**
+git add .
+
+```
+or
+```
+git add -A
+**Stage specific changes interactively:**
+```
+git add -p
+(This lets you choose which changes to stage)
+
+## Step 2: Commit
+
+**Commit with a message:**
+git commit -m "Your commit message"
+```
+
+**Commit with a detailed message (opens editor):
+git commit
+```
+
+**Combine staging and committing (for modified files only, not new files):**
+git commit -am "Your commit message"
+```
+
+## Complete Example Workflow:
+
+1. Make changes to your files
+(edit file1.txt, file2.txt, etc.)
+
+2. Check status
+git status
+
+3. Stage the changes
+git add file1.txt file2.txt
+
+4. Verify what's staged
+git status
+
+5. Commit with message
+git commit -m "Add new features to file1 and file2"
+
+6. View your commit
+git log --oneline
+```
+
+## Useful Commands:
+
+- **`git status`** - See what's changed and what's staged
+- **`git diff`** - See unstaged changes
+- **`git diff --staged`** - See staged changes before committing
+- **`git reset filename`** - Unstage a file
+- **`git restore filename`** - Discard unstaged changes
+
+In your Laravel project, you can use these commands to track your code changes!
+
+3. UNDER STANDING git log :-
+git log is a Git command that displays the commit history of a repository. Here's what it does:
+
+Main Functions:
+ i. Shows Commit History - Displays a list of commits in reverse chronological order (newest first), including:
+
+Commit hash (SHA-1)
+Author name and email
+Commit date and time
+Commit message
+ ii. Basic Usage:
+git log 
+This shows all commits with full details.
+
+Common Options:
+git log --oneline - Shows compact view with just commit hash and message
+git log --graph --oneline --all - Shows branch structure visually
+git log -n 5 - Shows last 5 commits
+git log --author="name" - Filters commits by author
+git log --since="2 weeks ago" - Shows commits from a specific time period
+git log --grep="keyword" - Searches commit messages
+git log filename - Shows commit history for a specific file
+git log -p - Shows actual code changes (patch view)
+Typical Output Example:
+In short: git log lets you view and search through your project's commit history to understand what changes were made, when, and by whom.
+
+
+BRANCHING -It is used to create branches and switch into them.
+1. git branch
+    it shows the no. of branches available for ex here it shwoed:
+    * main
+      sneha1
+    Where ever the star is, that is the current branch we are in.
+2. git branch sneha2
+    it creates another branch named sneha2
+3. git checkout sneha2 
+    now you are in the branch sneha2 instead of main
